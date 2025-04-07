@@ -16,3 +16,4 @@
 # 数据结构
 - 使用散列表存储节点 key，可以将获得节点 (key,value) 的时间复杂度为 O(1)。
 - 使用双向链表用于维护节点的顺序，支持高效的删除和插入操作，时间复杂度也为 O(1)。
+  ![Capture_20250407_184837](https://github.com/user-attachments/assets/1eb6e4d7-c1be-48d1-b22d-a8d790fc8dd3)
