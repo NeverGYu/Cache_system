@@ -9,4 +9,7 @@
   <img src="https://github.com/user-attachments/assets/f81ba4bf-e67c-4afc-840a-766c6226bc29" width="400" />
 - 我们可以直接将数据添加到头节点
     ![Capture_20250407_182302](https://github.com/user-attachments/assets/0e8da94f-880b-4834-91b5-a229ca2b592e)
-
+# 算法步骤
+- 新数据直接插入到列表头部。
+- 缓存数据被命中，将数据移到列表头部。
+- 缓存已满时，移除列表尾部数据。
