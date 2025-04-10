@@ -59,8 +59,10 @@ public:
             return;
             std::cout << "capcity initial = 0" << std::endl;
         }
+        std::lock_guard<std::mutex> lock(mtx);
         // 判断在hashmap中是否存在该key
-        if (auto it = hashmap_.find(key); it != hashmap_.end())
+        auto it = hashmap_.find(key);
+        if ( it != hashmap_.end())
         {
             // 如果存在
             updateExistingNode(it->second,value);
@@ -74,18 +76,15 @@ public:
     Value get(Key key)
     {
         Value value{};
-        if(get(key, value))
-        {
-            std::cout << "get success" << std::endl;
-            return value;
-        }
-        std::cout << "get failed" << std::endl;
+        get(key, value);
         return value;
     }
 
     bool get(Key key, Value& value)
     {
-        if(auto it = hashmap_.find(key); it != hashmap_.end())
+        std::lock_guard<std::mutex> lock(mtx);
+        auto it = hashmap_.find(key); 
+        if(it != hashmap_.end())
         {
             moveToMostRecent(it->second);
             value = it->second->getValue();
@@ -96,10 +95,12 @@ public:
 
     void remove(Key key)
     {
-        if(auto it = hashmap_.find(key); it != hashmap_.end())
+        std::lock_guard<std::mutex> lock(mtx);
+        auto it = hashmap_.find(key); 
+        if(it != hashmap_.end())
         {
             removeNode(it->second);
-            hashmap_.erase(key);
+            hashmap_.erase(it);
         }
     }
 
@@ -156,7 +157,7 @@ private:
     void addNewNode(Key key, Value value)
     {
         // 先判断容量是否大于给定阈值
-        if (hashmap_.size() == capcity_)
+        if (hashmap_.size() >= capcity_)
         {
             // 将访问次数最少的节点删除
             evictLeastNode();
@@ -178,7 +179,7 @@ private:
     }
 
 private:
-    int capcity_;           // 容量
+    int capcity_;          // 容量
     NodeMap hashmap_;      // hash表
     NodePtr dummyHead;     // 头指针
     NodePtr dummyTail;     // 尾指针

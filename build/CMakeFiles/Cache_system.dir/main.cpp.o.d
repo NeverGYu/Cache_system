@@ -1,5 +1,5 @@
 CMakeFiles/Cache_system.dir/main.cpp.o: /home/gch/Cache/main.cpp \
- /usr/include/stdc-predef.h /home/gch/Cache/LRUCache.h \
+ /usr/include/stdc-predef.h /home/gch/Cache/LRU_Cache.h \
  /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -175,4 +175,4 @@ CMakeFiles/Cache_system.dir/main.cpp.o: /home/gch/Cache/main.cpp \
  /usr/include/c++/11/bits/locale_facets.tcc \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
- /usr/include/c++/11/bits/istream.tcc
+ /usr/include/c++/11/bits/istream.tcc /home/gch/Cache/LRU_K_Cache.h
