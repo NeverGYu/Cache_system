@@ -14,5 +14,7 @@
   ![Capture_20250410_184353](https://github.com/user-attachments/assets/20ee8ee2-c37d-40ce-94f6-b03b512d69a7)
 - 当缓存队列需要淘汰页面时，淘汰最后一个页面，也就是第k次访问距离现在最久的那个页面。
   ![Capture_20250410_185059](https://github.com/user-attachments/assets/8e54aa5c-69bf-440f-bb09-d02ef471a867)
-
+# 小结
+- LRU-k 的命中率要比 LRU 要高，但是因为需要维护一个历史队列，因此内存消耗会比 LRU 多。
+- 实际应用中 LRU-2 是综合各种因素后最优的选择，LRU-3 或者更大的 K 值命中率会高，但适应性差，需要大量的数据访问才能将历史访问记录清除掉。
 
