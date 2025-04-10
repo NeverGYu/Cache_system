@@ -8,5 +8,11 @@
   ![Capture_20250410_182544](https://github.com/user-attachments/assets/b892d770-18f4-4511-9eb8-12903468148f)
 - 当历史队列中的页面满了，根据一定的缓存策略(FIFO、LRU、LFU)进行淘汰老的页面。
   ![Capture_20250410_182619](https://github.com/user-attachments/assets/785e7ffe-2bda-4eb8-8931-6d1ec9f05133)
+- 当历史队列中的某个页面第k次访问时，该页面从历史队列中出栈，并存放至缓存队列。
+- ![Capture_20250410_183756](https://github.com/user-attachments/assets/96467e8d-2dbb-4c8a-9f70-74771c4b867d)
+- 缓存队列中的页面再次被访问k次时，历史队列中该页面出栈，并且更新缓存队列中该页面的位置。
+  ![Capture_20250410_183756](https://github.com/user-attachments/assets/d9922b42-6496-4084-89e6-6633c9be3302)
+- 当缓存队列需要淘汰页面时，淘汰最后一个页面，也就是第k次访问距离现在最久的那个页面。
+  ![Capture_20250410_185059](https://github.com/user-attachments/assets/8e54aa5c-69bf-440f-bb09-d02ef471a867)
 
 
