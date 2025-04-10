@@ -18,6 +18,9 @@
 - 使用双向链表用于维护节点的顺序，支持高效的删除和插入操作，时间复杂度也为 O(1)。
   ![Capture_20250407_184837](https://github.com/user-attachments/assets/1eb6e4d7-c1be-48d1-b22d-a8d790fc8dd3)
 # 入口函数
-## put 函数
+### put 函数
   ![2d695a7c-7952-4d0a-b5aa-f2c3bb7f9225](https://github.com/user-attachments/assets/b0bd058f-be8e-4648-bb36-11502aae5a06)
+### get 函数
+  ![e7068e48-fcd6-44a7-b9e3-adeb349b96e8](https://github.com/user-attachments/assets/08b102f6-3716-461e-a8fd-0556a680b822)
+
 
