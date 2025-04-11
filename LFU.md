@@ -3,4 +3,5 @@
 - 这个缓存算法一般实现内部都会使用一个计数器来记录条目被访问的频率，然后依据计数器访问数值比较，把最小的条目首先被移除。
 - 这个方法并不经常使用，因为它无法对一个拥有最初高访问率之后长时间没有被访问的条目缓存负责。
 # 算法思想
-  ![Capture_20250411_123430](https://github.com/user-attachments/assets/cad1b972-1199-4520-9b14-ac58e5531090)
+  ![Capture_20250411_132000](https://github.com/user-attachments/assets/a7b64f01-1cde-4f0e-b83d-262db7d28b9f)
+
