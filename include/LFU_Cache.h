@@ -1,3 +1,6 @@
+#ifndef LFU_CACHE_H
+#define LFU_CACHE_H
+
 #include <memory>
 #include <mutex>
 #include <unordered_map>
@@ -114,6 +117,7 @@ public:
     using Freqlist = FreqList<Key,Value>;
     using FqtFqListMap = std::unordered_map<Freq, std::shared_ptr<Freqlist>>;
 
+
     explicit LfuCache(int capcity, int MaxAverNum = 5)
         : capcity_(capcity)
         , minFreq_(INT16_MAX)
@@ -150,7 +154,7 @@ public:
         return value;
     }
 
-    bool get(Key key, Value value)
+    bool get(Key key, Value &value)
     {
        std::lock_guard<std::mutex> lock(mtx_);
        if (auto it = nodemap_.find(key); it != nodemap_.end())
@@ -384,3 +388,5 @@ void LfuCache<Key, Value>::decreaseFreqNum(int num)
     else
         curAverNum_ = curTotalNum_ / nodemap_.size();
 }
+
+#endif

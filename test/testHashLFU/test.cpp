@@ -1,5 +1,3 @@
-#include "LRU_Cache.h"
-#include "LRU_K_Cache.h"
 #include "LFU_Cache.h"
 #include "LFU_Hash_Cache.h"
 

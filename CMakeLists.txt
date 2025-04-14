@@ -15,12 +15,8 @@ aux_source_directory(. SRC_LIST)
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 
 # 配置头文件的搜索路径
-INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR})
+INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/include)
+
 # 生成可执行文件
 add_executable(Cache_system ${SRC_LIST})
-
-# 包含头文件
-target_include_directories(Cache_system PRIVATE
-    ${CMAKE_SOURCE_DIR}  # 当前目录下的头文件
-)
 

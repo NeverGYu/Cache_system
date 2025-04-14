@@ -1,7 +1,7 @@
 [
 {
   "directory": "/home/gch/Cache/build",
-  "command": "/usr/bin/g++  -I/home/gch/Cache -g -g -std=gnu++17 -o CMakeFiles/Cache_system.dir/main.cpp.o -c /home/gch/Cache/main.cpp",
+  "command": "/usr/bin/g++  -I/home/gch/Cache/include -g -g -std=gnu++17 -o CMakeFiles/Cache_system.dir/main.cpp.o -c /home/gch/Cache/main.cpp",
   "file": "/home/gch/Cache/main.cpp"
 }
 ]
