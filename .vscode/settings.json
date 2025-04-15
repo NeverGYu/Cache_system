@@ -51,6 +51,7 @@
         "stop_token": "cpp",
         "thread": "cpp",
         "iostream": "cpp",
-        "istream": "cpp"
+        "istream": "cpp",
+        "list": "cpp"
     }
 }
